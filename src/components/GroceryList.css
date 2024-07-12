@@ -1,0 +1,71 @@
+/* GroceryList.css */
+
+.grocery-list-page {
+    max-width: 100%;
+    margin: 0 auto;
+    padding: 20px;
+    text-align: center;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background: url('../images/bottom.jpg') no-repeat center center fixed;
+    background-size: cover;
+  }
+  
+  .grocery-list-page h2 {
+    font-size: 34px;
+    color: #ffffff;
+    margin-bottom: 20px;
+    margin-top: 10px;
+  }
+  
+  .content {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    width: 100%;
+    max-width: 1000px;
+  }
+  
+  .grocery-list {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+    flex-grow: 1;
+    font-size: 16px;
+  }
+  
+  .grocery-list li {
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    padding: 10px;
+    margin: 10px 0;
+    text-align: left;
+    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+  }
+  
+  .grocery-list li:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+  }
+  
+  .done-btn {
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+    padding: 15px 20px;
+    font-size: 18px;
+    cursor: pointer;
+    margin-top: 500px;
+    transition: background-color 0.3s ease;
+    align-self: flex-start;
+    margin-left: 20px;
+  }
+  
+  .done-btn:hover {
+    background-color: #0056b3;
+  }
+  

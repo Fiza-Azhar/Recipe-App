@@ -1,0 +1,130 @@
+.recipe-list {
+  max-width: 100%;
+  margin: 0 auto;
+  padding: 20px;
+  text-align: center;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  min-height: 100vh;
+  background: url('../images/bottom.jpg'), no-repeat center center fixed;
+  background-size: cover;
+}
+
+.recipe-list h2 {
+  font-size: 36px;
+  color: #ffffff;
+  margin-bottom: 20px;
+  margin-top: 10px;
+}
+
+.search-bar {
+  margin-bottom: 20px;
+  width: 100%;
+  max-width: 600px;
+  display: flex;
+  justify-content: center;
+}
+
+.search-input {
+  width: 100%;
+  padding: 10px;
+  font-size: 16px;
+  border-radius: 8px;
+  border: 1px solid #ddd;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.cards-container-list {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px;
+  width: 100%;
+}
+
+.recipe-item {
+  background-color: #fff;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+  cursor: pointer;
+  padding: 20px;
+  width: 100%;
+  max-width: 350px;
+  text-align: left;
+}
+
+.recipe-item:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+.recipe-item h3 {
+  color: #333;
+  font-size: 24px;
+  margin-bottom: 10px;
+}
+
+.recipe-item p {
+  color: #666;
+  font-size: 16px;
+  margin: 5px 0;
+}
+
+.counter {
+  font-weight: bold;
+  color: #333;
+}
+
+.make-dish-btn
+  {
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+    padding: 10px 15px;
+    font-size: 14px;
+    cursor: pointer;
+    margin: 5px 5px 0 0;
+    transition: background-color 0.3s ease;
+  }
+.delete-btn
+{
+  background-color: #f2350b;
+  color: #fff;
+  border: none;
+  border-radius: 4px;
+  padding: 10px 15px;
+  font-size: 14px;
+  cursor: pointer;
+  margin: 5px 5px 0 0;
+  transition: background-color 0.3s ease;
+}
+
+.favorite-btn{
+  background-color: #007bff;
+  color: #fff;
+  border: none;
+  border-radius: 4px;
+  padding: 10px 15px;
+  margin-left: 60px;
+  font-size: 14px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+.make-dish-btn:hover,
+.delete-btn:hover,
+.favorite-btn:hover {
+  background-color: #0056b3;
+}
+
+.favorite-btn {
+  background-color: #ef7f7f;
+}
+
+.favorite-btn:hover {
+  background-color: #b50817;
+}
+
