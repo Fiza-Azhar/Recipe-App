@@ -1,0 +1,92 @@
+/* launchPage.css */
+.launch-container {
+    background: linear-gradient(135deg, #ff8a00, #e52e71);
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    padding: 20px;
+  }
+  
+  .logo-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 50px;
+  }
+  
+  .logo {
+    width: 150px;
+    height: auto;
+  }
+  
+  .app-name {
+    font-size: 36px;
+    font-weight: bold;
+    margin-top: 10px;
+  }
+  
+  .yum {
+    color: #ffcc00;
+    font-family: 'Poppins', sans-serif;
+  }
+  
+  .quick {
+    color: #ffffff; 
+    font-family: 'Poppins', sans-serif;
+  }
+  
+  .subtitle {
+    font-size: 14px;
+    color: #ffffff;
+    margin-top: 10px;
+  }
+  
+  .button-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  .launch-button {
+    background-color: #ffffff;
+    color: #ff8a00;
+    border: none;
+    padding: 15px 30px;
+    margin: 10px;
+    font-size: 18px;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, color 0.3s ease;
+  }
+  
+  .launch-button:hover {
+    background-color: #ff8a00;
+    color: #ffffff;
+  }
+  
+  @media (min-width: 768px) {
+    .launch-button {
+      font-size: 20px;
+      padding: 20px 40px;
+    }
+  
+    .app-name {
+      font-size: 48px;
+      font-family: 'Poppins', sans-serif;
+    }
+  }
+  
+  @media (min-width: 1024px) {
+    .launch-button {
+      font-size: 22px;
+      padding: 25px 50px;
+    }
+  
+    .app-name {
+      font-size: 60px;
+    }
+  }
+  
