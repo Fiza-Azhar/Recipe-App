@@ -186,6 +186,13 @@
 
 /* MenuPage.css */
 
+
+
+
+
+
+/*
+
 .menu-page {
   display: flex;
   flex-direction: column;
@@ -210,7 +217,6 @@
   gap: 20px;
   width: 90%;
 }
-
 .card {
   background: #fff;
   border-radius: 15px;
@@ -218,7 +224,8 @@
   overflow: hidden;
   transition: transform 0.2s;
   cursor: pointer;
-  background: linear-gradient(45deg, #ffe29f, #ffa99f);
+  /*background: linear-gradient(45deg, #ffe29f, #ffa99f);
+  background-color: #fff;
 }
 
 .card:hover {
@@ -255,3 +262,4 @@
   margin-right: 130px; 
 }
 
+  */

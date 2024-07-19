@@ -1,3 +1,5 @@
+/* before figma
+
 .signup-page {
     display: flex;
     flex-direction: column;
@@ -58,3 +60,135 @@
     cursor: pointer;
   }
   
+
+  */
+
+  /* SignUp.css */
+/* SignUp.css */
+
+.signup-page {
+  background: linear-gradient(135deg, #ff8a00, #e52e71);
+  min-height: 100vh; 
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  padding: 20px;
+  overflow: hidden; 
+}
+
+.orange-top {
+  width: 100%;
+  flex-shrink: 0; 
+  padding: 20px;
+  text-align: center;
+  position: relative;
+}
+
+.logo-container {
+  margin-top: 20px;
+  text-align: center;
+}
+
+.logo-container img {
+  width: 80px;
+  height: 80px;
+}
+
+.app-name {
+  font-size: 48px;
+  font-family: 'Poppins', sans-serif;
+
+}
+
+.yum {
+  color: #ffcc00; 
+  font-family: 'Poppins', sans-serif;
+
+}
+
+.quick {
+  color: #ffffff; 
+  font-family: 'Poppins', sans-serif;
+
+}
+
+.signup-container {
+  background-color: rgba(255, 255, 255, 0.9);
+  padding: 40px;
+  border-radius: 50px 50px 0 0;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  text-align: center;
+  width: 100%;
+  max-width: 90%;
+  margin-top: 10%; 
+  flex: 1; 
+}
+
+.signup-container h2 {
+  margin-bottom: 20px;
+  color: #ff8a00;
+}
+
+.signup-container input {
+  width: calc(100% - 30px);
+  padding: 15px;
+  margin: 10px 0;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  font-size: 16px;
+}
+
+.signup-container button {
+  background-color: #ff8a00;
+  color: #ffffff;
+  border: none;
+  padding: 15px;
+  margin: 10px 0;
+  font-size: 18px;
+  border-radius: 5px;
+  cursor: pointer;
+  width: calc(100% - 30px); 
+  max-width: 200px; 
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.signup-container button:hover {
+  background-color: #ffffff;
+  color: #ff8a00;
+}
+
+.signup-container p {
+  margin-top: 20px;
+  color: #555;
+  font-size: 14px;
+}
+
+.signup-container span {
+  color: #ff8a00;
+  cursor: pointer;
+  text-decoration: underline;
+}
+
+@media (min-width: 768px) {
+  .signup-container {
+    padding: 50px;
+  }
+
+  .signup-container h2 {
+    font-size: 24px;
+  }
+
+  .signup-container input {
+    padding: 18px;
+    font-size: 18px;
+  }
+
+  .signup-container button {
+    font-size: 20px;
+  }
+
+  .signup-container p {
+    font-size: 16px;
+  }
+}

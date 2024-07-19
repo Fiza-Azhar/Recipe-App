@@ -1,35 +1,60 @@
 /* FavRecipe.css */
+
+/*
 body, html {
   margin: 0;
   padding: 0;
   font-family: 'Georgia', serif;
-  background-color: #f0f0f0;
 }
 .fav-recipe-list {
-    margin: 20px;
+  display: flex;
+  flex-direction: column;
+  font-family: Arial, sans-serif;
+  background-color: #F8F8F8;
+  padding: 20px;
+  background-color: #F5CB58;
+  min-height: 100vh;
+  justify-content: flex-start;
+  align-items: center;
+  padding: 20px;
+  overflow: hidden; 
   }
-  
+  .fav-heading {
+    font-size: 26px;
+    text-align: center;
+    color: #fff;
+  }
+  .container-fav{
+    background-color: rgba(255, 255, 255, 0.9);
+    padding: 40px;
+    border-radius: 50px 50px 0 0;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    width: 100%;
+    max-width: 90%;
+    margin-top: 0; 
+    flex: 1; 
+    position: relative;
+    bottom: 0;
+  }
   .cards-container-fav {
-    /*display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
-    gap: 20px;*/
+    
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
     gap: 20px;
     
   }
-  
-  .card {
-    /*
-    background-color: #f5f5f5;
-    border-radius: 8px;
+  .orange-fav {
+    width: 100%;
+    flex-shrink: 0; 
     padding: 20px;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-    transition: transform 0.3s ease;
-    cursor: pointer;
-*/
-    flex: 1 1 300px; /* Flexbox properties */
+    text-align: center;
+    position: relative;
+  }
+  .card {
+   
+    flex: 1 1 300px;
     background-color: #f5f5f5;
     border-radius: 8px;
     padding: 20px;
@@ -67,89 +92,256 @@ body, html {
     font-weight: bold;
   }
   
+*/
 
-  
+
+
 /*
-  .fav-recipe-list {
-    max-width: 800px;
-    margin: 0 auto;
-    padding: 20px;
-  }
-  
-  .fav-recipe-list h2 {
-    color: #333;
-    font-size: 28px;
-    margin-bottom: 20px;
-  }
-  
-  .cards-container-fav {
-    display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
-    gap: 20px;
-  }
-  
-  .recipe-prod {
-    background-color: #fff;
-    padding: 20px;
-    border-radius: 8px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
-  }
-  
-  .recipe-prod:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
-  }
-  
-  .recipe-prod > div {
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    height: 100%;
-  }
-  
-  .recipe-prod h3 {
-    font-size: 24px;
-    margin-bottom: 10px;
-  }
-  
-  .recipe-prod p {
-    color: #666;
-    margin-bottom: 10px;
-  }
-  
-  .counter {
-    font-weight: bold;
-  }
-  
-  .make-btn,
-  .favorite-btn {
-    padding: 8px 16px;
-    margin-top: 10px;
-    font-size: 14px;
-    border-radius: 4px;
-    cursor: pointer;
-  }
-  
-  .make-btn {
-    background-color: #4caf50;
-    color: #fff;
-    border: none;
-  }
-  
-  .make-btn:hover {
-    background-color: #45a049;
-  }
-  
-  .favorite-btn {
-    background-color: #f0f0f0;
-    color: #333;
-    border: 1px solid #ccc;
-  }
-  
-  .favorite-btn:hover {
-    background-color: #e0e0e0;
-  }
-  
 
-  */
+//=============================perfect figma background
+.fav-recipe-list {
+  display: flex;
+  flex-direction: column;
+  font-family: Arial, sans-serif;
+  background-color: #F8F8F8;
+  padding: 20px;
+  background-color: #F5CB58;
+  min-height: 100vh;
+  justify-content: flex-start;
+  align-items: center;
+  padding: 20px;
+  overflow: hidden; 
+  }
+
+  .orange-fav {
+    width: 100%;
+    flex-shrink: 0; 
+    padding: 20px;
+    text-align: center;
+    position: relative;
+  }
+
+  .fav-heading {
+    font-size: 26px;
+    text-align: center;
+    color: #fff;
+  }
+.container-fav{
+  background-color: rgba(255, 255, 255, 0.9);
+  padding: 40px;
+  border-radius: 50px 50px 0 0;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  text-align: center;
+  width: 100%;
+  max-width: 90%;
+  margin-top: 0; 
+  flex: 1; 
+  position: relative;
+  bottom: 0;
+}
+.fav-card {
+  background: #fff;
+  border-radius: 15px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  transition: transform 0.2s;
+  cursor: pointer;
+}
+.cards-container-fav {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  justify-content: center;
+}
+
+.card.recipe-item {
+  background-color: white;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  overflow: hidden;
+  width: 300px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.recipe-image {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+}
+
+.card.recipe-item h3 {
+  margin: 10px 0;
+}
+
+.card.recipe-item p {
+  margin: 5px 0;
+}
+
+.counter {
+  font-weight: bold;
+}
+
+.make-dish-btn {
+  display: inline-block;
+  margin: 10px 5px;
+  padding: 10px 15px;
+  border: none;
+  border-radius: 5px;
+  background-color: orange;
+  color: white;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.remove-btn {
+  display: inline-block;
+  margin: 10px 5px;
+  padding: 10px 15px;
+  border: none;
+  border-radius: 5px;
+  background-color: rgb(255, 118, 87);
+  color: white;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.make-dish-btn:hover,
+.favorite-btn:hover {
+  background-color: darkorange;
+}
+
+
+
+*/
+
+.fav-recipe-list {
+  display: flex;
+  flex-direction: column;
+  font-family: Arial, sans-serif;
+  background-color: #F8F8F8;
+  padding: 20px;
+  background-color: #F5CB58;
+  min-height: 100vh;
+  justify-content: flex-start;
+  align-items: center;
+  padding: 20px;
+  overflow: hidden; 
+  }
+
+  .orange-fav {
+    width: 100%;
+    flex-shrink: 0; 
+    padding: 20px;
+    text-align: center;
+    position: relative;
+  }
+
+  .fav-heading {
+    font-size: 26px;
+    text-align: center;
+    color: #fff;
+  }
+.container-fav{
+  background-color: rgba(255, 255, 255, 0.9);
+  padding: 40px;
+  border-radius: 50px 50px 0 0;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  text-align: center;
+  width: 100%;
+  max-width: 90%;
+  margin-top: 0; 
+  flex: 1; 
+  position: relative;
+  bottom: 0;
+  overflow-y: auto;
+}
+.fav-card {
+  background: #fff;
+  border-radius: 15px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  transition: transform 0.2s;
+  cursor: pointer;
+}
+.cards-container-fav {
+  /*display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  justify-content: center; */
+  display: grid;
+  grid-template-columns: repeat(2, 1fr); /* Three columns for two recipes per row */
+  gap: 20px;
+}
+
+.card.recipe-item {
+  /*background-color: white;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  overflow: hidden;
+  width: 300px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+*/
+  background-color: white;
+  box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1);
+  border-radius: 5px;
+  padding: 5px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  transition: transform 0.2s ease-in-out; /* Add hover effect for subtle transformation */
+}
+
+.fav-recipe-image {
+  width: 80%;
+  height: 100px;
+  object-fit: cover;
+margin-right: 50px;
+  border-radius: 5px;
+  cursor: pointer; /* Style cursor for clickable image */
+}
+
+.card.recipe-item h3 {
+  margin: 0;
+  font-size: 1.2rem;
+  font-weight: bold;
+  color: #333; /* Darker text color */
+}
+
+.card.recipe-item p {
+  margin-top: 5px;
+  font-size: 0.9rem;
+  color: #666;
+}
+
+.counter {
+  font-weight: bold;
+}
+
+.make-dish-btn {
+  background-color: #f2b24a; /* Orange accent color for buttons */
+  color: white;
+  padding: 10px 15px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  margin-top: 10px;
+}
+
+.remove-btn {
+  background-color: transparent; 
+  border: none; 
+  cursor: pointer;
+  margin: 5px; 
+  padding: 0; 
+  font-size: 18px;
+  color: #cd0e0e;
+
+}
+
+.make-dish-btn:hover,
+.favorite-btn:hover {
+  background-color: darkorange;
+}
+
+
+

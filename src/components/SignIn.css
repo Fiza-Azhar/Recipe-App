@@ -1,60 +1,218 @@
+/* SignIn.css 
+//version 1 of figma
+
 .signin-page {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    min-height: 100vh;
-    background: linear-gradient(45deg, #ffe29f, #ffa99f);
-  }
-  
+  background: linear-gradient(135deg, #ff8a00, #e52e71);
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+}
+
+.signin-container {
+  background-color: rgba(255, 255, 255, 0.9);
+  padding: 40px;
+  border-radius: 10px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  text-align: center;
+  width: 100%;
+  max-width: 400px;
+}
+
+.signin-container h2 {
+  margin-bottom: 20px;
+  color: #ff8a00;
+}
+
+.signin-container input {
+  width: 100%;
+  padding: 15px;
+  margin: 10px 0;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  font-size: 16px;
+}
+
+.signin-container button {
+  background-color: #ff8a00;
+  color: #ffffff;
+  border: none;
+  padding: 15px;
+  margin: 10px 0;
+  font-size: 18px;
+  border-radius: 5px;
+  cursor: pointer;
+  width: 100%;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.signin-container button:hover {
+  background-color: #ffffff;
+  color: #ff8a00;
+}
+
+.signin-container p {
+  margin-top: 20px;
+  color: #555;
+  font-size: 14px;
+}
+
+.signin-container span {
+  color: #ff8a00;
+  cursor: pointer;
+  text-decoration: underline;
+}
+
+@media (min-width: 768px) {
   .signin-container {
-    background-color: white;
-    padding: 20px;
-    border-radius: 8px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    text-align: center;
-    max-width: 400px;
-    width: 100%;
+    padding: 50px;
   }
-  
+
   .signin-container h2 {
-    font-size: 36px;
-    color: #1f1d1d;
-    margin-bottom: 20px;
+    font-size: 24px;
   }
-  
+
   .signin-container input {
-    width: 100%;
-    padding: 10px;
-    font-size: 16px;
-    border-radius: 8px;
-    border: 1px solid #ddd;
-    margin-bottom: 10px;
-  }
-  
-  .signin-container button {
-    background-color: #ff6b6b;
-    color: white;
-    border: none;
-    border-radius: 8px;
-    padding: 15px 30px;
+    padding: 18px;
     font-size: 18px;
-    cursor: pointer;
-    transition: background-color 0.3s ease;
-    width: 100%;
   }
-  
-  .signin-container button:hover {
-    background-color: #e63946;
+
+  .signin-container button {
+    font-size: 20px;
   }
-  
+
   .signin-container p {
-    margin-top: 20px;
-    font-size: 14px;
+    font-size: 16px;
   }
-  
-  .signin-container p span {
-    color: #007bff;
-    cursor: pointer;
+}
+*/
+
+/* SignIn.css 
+
+//2nd version similar but not responsive */
+
+.signin-page {
+  background: linear-gradient(135deg, #ff8a00, #e52e71);
+  min-height: 100vh; 
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  padding: 20px;
+  overflow: hidden; 
+}
+
+.orange-top {
+  width: 100%;
+  flex-shrink: 0; 
+  padding: 20px;
+  text-align: center;
+  position: relative;
+}
+
+.logo-container {
+  margin-top: 20px;
+  text-align: center;
+}
+
+.logo-container img {
+  width: 80px;
+  height: 80px;
+}
+.app-name {
+  font-size: 48px;
+  font-family: 'Poppins', sans-serif;
+
+}
+.yum {
+  color: #ffcc00; 
+  font-family: 'Poppins', sans-serif;
+
+}
+
+.quick {
+  color: #ffffff;
+  font-family: 'Poppins', sans-serif;
+
+}
+.signin-container {
+  background-color: rgba(255, 255, 255, 0.9);
+  padding: 40px;
+  border-radius: 50px 50px 0 0;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  text-align: center;
+  width: 100%;
+  max-width: 90%;
+  margin-top: 10%; 
+  flex: 1; 
+}
+
+.signin-container h2 {
+  margin-bottom: 20px;
+  color: #ff8a00;
+}
+
+.signin-container input {
+  width: calc(100% - 30px);
+  padding: 15px;
+  margin: 10px 0;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  font-size: 16px;
+}
+
+.signin-container button {
+  background-color: #ff8a00;
+  color: #ffffff;
+  border: none;
+  padding: 15px;
+  margin: 10px 0;
+  font-size: 18px;
+  border-radius: 5px;
+  cursor: pointer;
+  width: calc(100% - 30px); 
+  max-width: 200px; 
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.signin-container button:hover {
+  background-color: #ffffff;
+  color: #ff8a00;
+}
+
+.signin-container p {
+  margin-top: 20px;
+  color: #555;
+  font-size: 14px;
+}
+
+.signin-container span {
+  color: #ff8a00;
+  cursor: pointer;
+  text-decoration: underline;
+}
+
+@media (min-width: 768px) {
+  .signin-container {
+    padding: 50px;
   }
-  
+
+  .signin-container h2 {
+    font-size: 24px;
+  }
+
+  .signin-container input {
+    padding: 18px;
+    font-size: 18px;
+  }
+
+  .signin-container button {
+    font-size: 20px;
+  }
+
+  .signin-container p {
+    font-size: 16px;
+  }
+}
+
