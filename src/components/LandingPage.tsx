@@ -1,47 +1,4 @@
-//original landing page
-/*
-import React from 'react';
-import { useNavigate } from 'react-router-dom';
-import './LandingPage.css';
-import img from '../images/r5.png';
-import img2 from '../images/r2.png';
-import img3 from '../images/r4.png';
 
-const LandingPage: React.FC = () => {
-  const navigate = useNavigate();
-
-  const handleGetStarted = () => {
-    navigate('/menu');
-  };
-
-  return (
-    <div className="landing-page">
-      <div className="welcome-section">
-        <h1 className="welcome-heading animate-text">Welcome to Recipe Todo App</h1>
-        <p>Get ready to organize and track your favorite recipes!</p>
-        <button className="get-started-button" onClick={handleGetStarted}>
-          Get Started
-        </button>
-      </div>
-      <div className="image-section">
-        <div className="image-container">
-          <img src={img} className="welcome-image image-1" alt="Dish 1" />
-          <img src={img2} className="welcome-image image-2" alt="Dish 2" />
-          <img src={img3} className="welcome-image image-3" alt="Dish 3" />
-        </div>
-      </div>
-    </div>
-  );
-};
-
-export default LandingPage;
-
-
-*/
-
-
-
-//version 1
 import React from 'react';
 import { useNavigate } from 'react-router-dom';
 import { useSelector } from 'react-redux';
@@ -58,11 +15,10 @@ const LandingPage: React.FC = () => {
     navigate('/signup');
   };
 
-  // Filter recipes for "Mostly Cooked" (count > 0) and "Recently Added" (latest added recipes)
   const mostlyCookedRecipes = recipes
     .filter(recipe => recipe.counter > 0)
-    .sort((a, b) => b.counter - a.counter) // Sort by counter in descending order
-    .slice(0, 4); // Show only top 4 recipes
+    .sort((a, b) => b.counter - a.counter) 
+    .slice(0, 4); 
 
   const recentlyAddedRecipes = [...recipes]
     .reverse()

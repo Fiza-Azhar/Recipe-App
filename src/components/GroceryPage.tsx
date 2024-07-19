@@ -4,6 +4,11 @@ import { RootState } from '../redux/store';
 import { useNavigate } from 'react-router-dom';
 import img from '../images/l4.png';
 import './GroceryPage.css';
+import { AiOutlineHeart, AiFillHeart } from 'react-icons/ai';
+import { RiAddCircleLine, RiCheckboxCircleLine } from 'react-icons/ri';
+import { BsListCheck } from 'react-icons/bs';
+import { IoMdBasket } from 'react-icons/io';
+import { AiOutlineHome, AiOutlineSearch, AiOutlineShopping } from 'react-icons/ai';
 
 const GroceryPage: React.FC = () => {
   const recipes = useSelector((state: RootState) => state.recipes);
@@ -32,35 +37,28 @@ const GroceryPage: React.FC = () => {
     const selectedRecipeDetails = recipes.filter(recipe =>
       selectedRecipes.includes(recipe.id)
     );
-    // Pass selectedRecipeDetails and servings to GroceryList page
     navigate('/groceryList', { state: { selectedRecipes: selectedRecipeDetails, servings } });
   };
 
   return (
     <div className="grocery-page">
-      <nav className="navbar">
-        <img src={img} alt="Logo" className="logo" />
-        <ul className="nav-links">
-        <li onClick={() => navigate('/')}>Home</li>
-          <li onClick={() => navigate('/addRecipe')}>Add Recipe</li>
-          <li onClick={() => navigate('/recipeList')}>View Recipes</li>
-          <li onClick={() => navigate('/grocery')}>Grocery</li>
-          <li onClick={() => navigate('/favRecipe')}>Favorites</li>
-          <li onClick={() => navigate('/signin')}>Login</li>
-          <li onClick={() => navigate('/signup')}>Sign Up</li>
-        </ul>
-      </nav>
+    <div className="orange-grocery">
       <h2>Grocery List</h2>
+      </div>
+    <div className="container-grocery">
       <div className="grocery-list">
         {recipes.map(recipe => (
-          <div key={recipe.id} className="recipe-item">
+          <div key={recipe.id} className="grocery-recipe-item">
+          <img src={recipe.image} className="grocery-recipe-image" alt={recipe.name} />
+          <h5 className="grocery-recipe-name">{recipe.name}</h5>
+          
+
             <label>
-              <input
+              <input className='grocery-checkbox'
                 type="checkbox"
                 checked={selectedRecipes.includes(recipe.id)}
                 onChange={() => handleCheckboxChange(recipe.id)}
               />
-              {recipe.name}
             </label>
           </div>
         ))}
@@ -78,13 +76,25 @@ const GroceryPage: React.FC = () => {
               min="1"
             />
             <div className="modal-buttons">
+            <button onClick={handleModalClose}>Cancel</button>
               <button onClick={handleDone}>Done</button>
-              <button onClick={handleModalClose}>Cancel</button>
+             
             </div>
           </div>
         </div>
       )}
+          <nav className="bottom-nav">
+          <ul>
+            <li onClick={() => navigate('/home')}><AiOutlineHome /></li>
+            <li onClick={() => navigate('/addRecipe')}><RiAddCircleLine /></li>
+            <li onClick={() => navigate('/recipeList')}><BsListCheck /></li>
+            <li onClick={() => navigate('/grocery')}><IoMdBasket /></li>
+            <li onClick={() => navigate('/favRecipe')}><AiOutlineHeart className="active" /></li>
+          </ul>
+        </nav>
     </div>
+    </div>
+
   );
 };
 

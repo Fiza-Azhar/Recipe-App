@@ -2,6 +2,11 @@ import React from 'react';
 import { useLocation, useNavigate } from 'react-router-dom';
 import './GroceryList.css';
 import img from '../images/l4.png';
+import { AiOutlineHeart, AiFillHeart } from 'react-icons/ai';
+import { RiAddCircleLine, RiCheckboxCircleLine } from 'react-icons/ri';
+import { BsListCheck } from 'react-icons/bs';
+import { IoMdBasket } from 'react-icons/io';
+import { AiOutlineHome, AiOutlineSearch, AiOutlineShopping } from 'react-icons/ai';
 
 interface Ingredient {
   name: string;
@@ -48,18 +53,10 @@ const GroceryList: React.FC = () => {
 
   return (
     <div className="grocery-list-page">
-      <nav className="navbar">
-          <img src={img} alt="Logo"  className="logo"/>
-        <ul className="nav-links">
-          <li onClick={() => navigate('/')}>Home</li>
-          <li onClick={() => navigate('/addRecipe')}>Add Recipe</li>
-          <li onClick={() => navigate('/recipeList')}>View Recipes</li>
-          <li onClick={() => navigate('/grocery')}>Grocery</li>
-          <li onClick={() => navigate('/favRecipe')}>Favorites</li>
-          <li onClick={() => navigate('/signin')}>Login</li>
-          <li onClick={() => navigate('/signup')}>Sign Up</li>
-        </ul>
-      </nav>
+      <div className="orange-grocery">
+      <h2>Grocery List</h2>
+      </div>
+      <div className='gl-container'>
       <div className="content">
         <ul className="grocery-list">
           {Object.entries(totalIngredients).map(([name, { quantity, unit }]) => (
@@ -68,8 +65,18 @@ const GroceryList: React.FC = () => {
             </li>
           ))}
         </ul>
-        <button onClick={() => navigate('/menu')} className="done-btn">Done</button>
+        <button onClick={() => navigate('/home')} className="done-btn">Done</button>
       </div>
+      <nav className="bottom-nav">
+          <ul>
+            <li onClick={() => navigate('/home')}><AiOutlineHome /></li>
+            <li onClick={() => navigate('/addRecipe')}><RiAddCircleLine /></li>
+            <li onClick={() => navigate('/recipeList')}><BsListCheck /></li>
+            <li onClick={() => navigate('/grocery')}><IoMdBasket /></li>
+            <li onClick={() => navigate('/favRecipe')}><AiOutlineHeart className="active" /></li>
+          </ul>
+        </nav>
+    </div>
     </div>
   );
 };
